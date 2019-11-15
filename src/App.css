@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  margin: 0px;
+  padding: 0px;
 }
 
 .App-logo {
@@ -17,15 +19,11 @@
   color: white;
 }
 
-div {
-  margin: 0px;
-  padding: 0px;
-}
-
 .club-members {
   display: flex;
   flex-wrap: wrap;
-  /* grid-template-columns: 33% 33% 33%; */
+  margin: 0px auto;
+  max-width: 800px;
 }
 
 .photo-container {

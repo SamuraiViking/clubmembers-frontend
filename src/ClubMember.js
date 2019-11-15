@@ -1,4 +1,5 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button';
 
 const ClubMember = (props) => {
     return (
@@ -8,6 +9,7 @@ const ClubMember = (props) => {
             <div className="photo-container">
                 <img src={props.photo} alt="Club Member"/>
             </div>
+            <Button>Contact</Button>
         </div>
     )
 }

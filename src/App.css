@@ -17,6 +17,28 @@
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
+div {
+  margin: 0px;
+  padding: 0px;
 }
+
+.club-members {
+  display: flex;
+  flex-wrap: wrap;
+  /* grid-template-columns: 33% 33% 33%; */
+}
+
+.photo-container {
+  height: 300px;
+  width: 200px;
+}
+
+.photo-container img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+

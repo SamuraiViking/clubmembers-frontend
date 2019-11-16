@@ -1,16 +1,17 @@
 import React from 'react'
-import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card'
 
 const ClubMember = (props) => {
     return (
-        <div className="club-member">
-            <h2>{props.display_name}</h2>
-            <p>{props.email}</p>
-            <div className="photo-container">
-                <img src={props.photo} alt="Club Member"/>
-            </div>
-            <Button>Contact</Button>
-        </div>
+        <Card style={{ width: '13rem', margin: '20px' }}>
+            <Card.Img variant="top" src={props.photo} />
+            <Card.Body>
+                <Card.Title>{props.display_name}</Card.Title>
+                <Card.Text>
+                    {props.email}
+                </Card.Text>
+            </Card.Body>
+        </Card>
     )
 }
 

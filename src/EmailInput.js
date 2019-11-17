@@ -12,7 +12,6 @@ const EmailInput = (props) => {
 
     return (
         <div className="email-input">
-            {formText}
             <Form onSubmit={handleSubmit}>
                 <Form.Group controlId="validationCustomUsername">
                     <Form.Label>Add a Member</Form.Label>

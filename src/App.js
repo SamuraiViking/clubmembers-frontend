@@ -5,8 +5,9 @@ import axios from 'axios'
 // Components
 import Header from './Header'
 import EmailInput from './EmailInput'
-import ClubMembers from './ClubMembers'
+import Group from './Group'
 import Footer from './Footer'
+import GroupDropDown from './GroupDropDown'
 
 // CSS
 import './App.css';
@@ -16,14 +17,14 @@ export default class App extends Component  {
   constructor(props) {
     super(props)
     this.state = {
-        clubMembers: [],
+        members: [],
         errors: []
     }
   }
 
   componentDidMount() {
-      axios.get('http://localhost:8000/api/clubmembers/')
-      .then(res => this.setState({ clubMembers: res.data }))
+      axios.get('http://localhost:8000/api/groups/7')
+      .then(res => this.setState({ members: res.data.members }))
       .catch(errors => this.setState({ errors: errors }))
   }
 
@@ -31,9 +32,10 @@ export default class App extends Component  {
     return (
       <div className="App">
         <Header />
+        <GroupDropDown />
         <EmailInput />
-        <ClubMembers
-          clubMembers={this.state.clubMembers}
+        <Group
+          members={this.state.members}
         />
         <Footer />
       </div>
